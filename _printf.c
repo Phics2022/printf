@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
+#include "main.h"
 
 /**
  * _printf - prints formatted output to stdout
