@@ -49,7 +49,7 @@ break;
 default:
 {
 write(1, ptr-1, 2);
-num_cont;
+num_cont++;
 break;
 }
 }
