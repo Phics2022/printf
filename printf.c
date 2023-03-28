@@ -32,6 +32,9 @@ break;
 case '%':
 case_pers(num_cont);
 break;
+default:
+def(ptr, num_cont);
+break;
 }
 }
 else
