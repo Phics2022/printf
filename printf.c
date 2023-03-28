@@ -21,44 +21,22 @@ while (*ptr)
 if (*ptr == '%')
 {
 ptr++;
-switch(*ptr)
+switch (*ptr)
 {
 case 'c':
-{
-char chr = (char)va_arg(args, int);
-write(1, &chr, 1);
-num_cont++;
+case_c((char)va_arg(args, int), num_cont);
 break;
-}
 case 's':
-{
-const char *str = va_arg(args, const char *);
-while (*str)
-{
-write(1, str, 1);
-str++;
-num_cont++;
-}
+case_s(va_arg(args, const char*), num_cont);
 break;
-}
 case '%':
-{
-write(1,ptr, 1);
+case_pers(num_cont);
 break;
-}
-default:
-{
-write(1, ptr-1, 2);
-num_cont++;
-break;
-}
 }
 }
 else
-{
 write(1, ptr, 1);
 num_cont++;
-}
 ptr++;
 }
 va_end(args);
