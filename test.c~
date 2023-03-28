@@ -1,9 +1,0 @@
-#include "main.h"
-#include <stdio.h>
-int main(void)
-{
-  char character = 'C';
-  char *name = "feranmi";
-  _printf("my name is %s of the %c coperation with 70%%\n", name, character);
-  return (0);
-}
