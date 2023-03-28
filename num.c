@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
 * print_d - Print decimal (Base 10) digits (%d)
