@@ -11,11 +11,11 @@
 int _printf(const char *format, ...)
 {
 const char *ptr = format;
-int num_cont = 0;
+int num_cont = -1;
 va_list args;
 va_start(args, format);
-if (ptr == NULL)
-return (0);
+if (ptr != NULL)
+{
 while (*ptr)
 {
 if (*ptr == '%')
@@ -40,5 +40,6 @@ num_cont++;
 ptr++;
 }
 va_end(args);
+}
 return (num_cont);
 }
